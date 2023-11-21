@@ -16,3 +16,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/robots', function(){
+    return index()
+})
+
+Route::get('/robots/{id}', function($id){
+    return show($id)
+})
+
+Route::get('/robots/revisar/{id}', function(){
+    return formReview()
+})
+
+Route::post('/robots', function(){
+    return review()
+})
